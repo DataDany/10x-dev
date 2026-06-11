@@ -27,6 +27,15 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# editor & IDE config
+.vscode/
+.idea/
+
+# CI/CD & tooling (local-only)
+.github/
+.husky/
+.codex/
+
 # AI agent instructions (local-only, not for version control)
 CLAUDE.md
 CLAUDE.md.scaffold
