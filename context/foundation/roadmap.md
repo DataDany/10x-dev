@@ -3,7 +3,7 @@ project: 10xStronger
 version: 1
 status: draft
 created: 2026-06-12
-updated: 2026-06-12
+updated: 2026-06-18
 prd_version: 1
 main_goal: speed
 top_blocker: time
@@ -32,7 +32,7 @@ The primary success criterion is literally "user configures a dumbbell (handle +
 | ID   | Change ID                  | Outcome (user can …)                                                           | Prerequisites | PRD refs                                      | Status   |
 | ---- | -------------------------- | ------------------------------------------------------------------------------ | ------------- | --------------------------------------------- | -------- |
 | F-01 | equipment-schema           | (foundation) equipment config schema migrated to Supabase with RLS             | —             | FR-003, FR-004, FR-005, FR-006, FR-007        | ready    |
-| S-01 | dumbbell-config-calculator | create a dumbbell config and immediately see the calculated total weight       | F-01          | FR-001, FR-002, FR-003, FR-004, FR-005, US-01 | proposed |
+| S-01 | dumbbell-config-calculator | create a dumbbell config and immediately see the calculated total weight       | F-01          | FR-001, FR-002, FR-003, FR-004, FR-005, US-01 | done     |
 | S-02 | config-management          | edit and delete existing equipment configurations                              | F-01, S-01    | FR-006, FR-007                                | proposed |
 | S-03 | extended-equipment-types   | configure other equipment types (barbell, kettlebell) using the same mechanism | F-01, S-01    | FR-008                                        | proposed |
 
@@ -84,7 +84,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** Calculation must be arithmetically exact and visibly update on every input change (guardrail + NFR). A wrong result here undermines the entire purpose of the product.
-- **Status:** proposed
+- **Status:** done
 
 ### S-02: Config management — edit and delete
 
@@ -133,4 +133,4 @@ Foundations below assume these are present and do NOT re-scaffold them.
 
 ## Done
 
-(Empty on first generation. `/10x-archive` appends an entry here — and flips that item's `Status` to `done` — when a change whose `Change ID` matches the item is archived.)
+- **S-01: user can create a dumbbell configuration (name, handle weight, plate weight, plate count) and immediately see the calculated total weight updating with every input change.** — Archived 2026-06-18 → `context/archive/2026-06-18-dumbbell-config-calculator/`. Lesson: —.

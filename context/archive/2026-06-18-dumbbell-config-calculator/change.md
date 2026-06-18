@@ -1,10 +1,10 @@
 ---
 change_id: dumbbell-config-calculator
 title: Dumbbell config form with live weight calculation
-status: implemented
+status: archived
 created: 2026-06-18
 updated: 2026-06-18
-archived_at: null
+archived_at: 2026-06-18T21:59:05Z
 ---
 
 ## Notes
