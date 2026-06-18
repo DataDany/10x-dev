@@ -1,27 +1,60 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { createClient } from "@/lib/supabase";
+import ConfigForm from "@/components/equipment/ConfigForm";
+import { ConfigList } from "@/components/equipment/ConfigList";
 
 const { user } = Astro.locals;
+const error = Astro.url.searchParams.get("error");
+
+const supabase = createClient(Astro.request.headers, Astro.cookies);
+let configs: {
+  id: string;
+  user_id: string;
+  name: string;
+  equipment_type: string;
+  handle_weight: number;
+  plate_weight: number;
+  plate_count: number;
+  created_at: string;
+  updated_at: string;
+}[] = [];
+
+if (supabase && user) {
+  const { data } = await supabase.from("equipment_configs").select("*").order("created_at", { ascending: false });
+  configs = data ?? [];
+}
 ---
 
 <Layout title="Dashboard">
-  <div class="bg-cosmic flex min-h-screen items-center justify-center p-4">
-    <div class="rounded-2xl border border-white/10 bg-white/10 p-8 text-center text-white backdrop-blur-xl">
-      <h1 class="mb-4 bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-3xl font-bold text-transparent">
-        Dashboard
-      </h1>
-      <p class="text-blue-100/80">
-        Welcome, <span class="font-semibold text-white">{user?.email}</span>
-      </p>
-      <p class="mt-2 text-sm text-blue-100/50">This page is only for authenticated users.</p>
-      <form method="POST" action="/api/auth/signout" class="mt-6">
-        <button
-          type="submit"
-          class="rounded-lg border border-white/20 bg-white/10 px-4 py-2 text-sm transition-colors hover:bg-white/20"
-        >
-          Sign out
-        </button>
-      </form>
+  <div class="bg-cosmic min-h-screen p-6">
+    <div class="mx-auto max-w-2xl">
+      <div class="mb-8 flex items-center justify-between">
+        <div>
+          <h1 class="bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-3xl font-bold text-transparent">
+            My Equipment
+          </h1>
+          <p class="mt-1 text-sm text-blue-100/50">{user?.email}</p>
+        </div>
+        <form method="POST" action="/api/auth/signout">
+          <button
+            type="submit"
+            class="rounded-lg border border-white/20 bg-white/10 px-4 py-2 text-sm text-white transition-colors hover:bg-white/20"
+          >
+            Sign out
+          </button>
+        </form>
+      </div>
+
+      <section class="mb-8 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+        <h2 class="mb-4 font-semibold text-white">Add Configuration</h2>
+        <ConfigForm serverError={error} client:load />
+      </section>
+
+      <section>
+        <h2 class="mb-4 font-semibold text-white">Saved Configurations</h2>
+        <ConfigList configs={configs} />
+      </section>
     </div>
   </div>
 </Layout>

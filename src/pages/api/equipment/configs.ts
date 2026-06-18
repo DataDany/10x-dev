@@ -21,8 +21,8 @@ export const POST: APIRoute = async (context) => {
   const plateWeight = parseFloat(plateWeightRaw ?? "");
   const plateCount = parseInt(plateCountRaw ?? "", 10);
 
-  if (isNaN(handleWeight) || handleWeight < 0) {
-    return context.redirect(`/dashboard?error=${encodeURIComponent("Handle weight must be a non-negative number")}`);
+  if (isNaN(handleWeight) || handleWeight <= 0) {
+    return context.redirect(`/dashboard?error=${encodeURIComponent("Handle weight must be greater than 0")}`);
   }
   if (isNaN(plateWeight) || plateWeight < 0) {
     return context.redirect(`/dashboard?error=${encodeURIComponent("Plate weight must be a non-negative number")}`);

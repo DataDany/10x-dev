@@ -217,41 +217,41 @@ Replace the `dashboard.astro` placeholder with the full layout: server-side conf
 
 #### Automated
 
-- [x] 1.1 `npx astro sync && npm run lint` passes
+- [x] 1.1 `npx astro sync && npm run lint` passes — 3fd474f
 
 #### Manual
 
-- [x] 1.2 POST valid data → config row appears in Supabase Studio
-- [x] 1.3 POST duplicate name → specific error message on dashboard
-- [x] 1.4 POST empty name → validation error on dashboard
-- [x] 1.5 POST unauthenticated → redirect to `/auth/signin`
+- [x] 1.2 POST valid data → config row appears in Supabase Studio — 3fd474f
+- [x] 1.3 POST duplicate name → specific error message on dashboard — 3fd474f
+- [x] 1.4 POST empty name → validation error on dashboard — 3fd474f
+- [x] 1.5 POST unauthenticated → redirect to `/auth/signin` — 3fd474f
 
 ### Phase 2: React components
 
 #### Automated
 
-- [ ] 2.1 `npx astro sync && npm run lint` passes with no type errors in new components
+- [x] 2.1 `npx astro sync && npm run lint` passes with no type errors in new components
 
 #### Manual
 
-- [ ] 2.2 Live calc: handle=2.5, plate=1.25, count=4 → shows `7.5 kg`
-- [ ] 2.3 Live calc shows `0.0 kg` when fields are empty
-- [ ] 2.4 Client-side validation blocks submit when name is empty
-- [ ] 2.5 ConfigCard renders with correct calculated weight
-- [ ] 2.6 ConfigList renders empty-state message when no configs provided
+- [x] 2.2 Live calc: handle=2.5, plate=1.25, count=4 → shows `7.5 kg`
+- [x] 2.3 Live calc shows `0.0 kg` when fields are empty
+- [x] 2.4 Client-side validation blocks submit when name is empty
+- [x] 2.5 ConfigCard renders with correct calculated weight
+- [x] 2.6 ConfigList renders empty-state message when no configs provided
 
 ### Phase 3: Dashboard integration
 
 #### Automated
 
-- [ ] 3.1 `npm run build` exits 0
-- [ ] 3.2 `npx astro sync && npm run lint` passes
+- [x] 3.1 `npm run build` exits 0
+- [x] 3.2 `npx astro sync && npm run lint` passes
 
 #### Manual
 
-- [ ] 3.3 Sign in → dashboard shows form and empty-state
-- [ ] 3.4 Submit form → config card appears after redirect
-- [ ] 3.5 Live calc works end-to-end in browser
-- [ ] 3.6 Duplicate name → specific error on dashboard
-- [ ] 3.7 Empty form submit → client-side validation blocks
-- [ ] 3.8 Unauthenticated `/dashboard` visit → redirect to sign-in
+- [x] 3.3 Sign in → dashboard shows form and empty-state
+- [x] 3.4 Submit form → config card appears after redirect
+- [x] 3.5 Live calc works end-to-end in browser
+- [x] 3.6 Duplicate name → specific error on dashboard
+- [x] 3.7 Empty form submit → client-side validation blocks
+- [x] 3.8 Unauthenticated `/dashboard` visit → redirect to sign-in
