@@ -230,28 +230,28 @@ Replace the `dashboard.astro` placeholder with the full layout: server-side conf
 
 #### Automated
 
-- [x] 2.1 `npx astro sync && npm run lint` passes with no type errors in new components
+- [x] 2.1 `npx astro sync && npm run lint` passes with no type errors in new components — fba656b
 
 #### Manual
 
-- [x] 2.2 Live calc: handle=2.5, plate=1.25, count=4 → shows `7.5 kg`
-- [x] 2.3 Live calc shows `0.0 kg` when fields are empty
-- [x] 2.4 Client-side validation blocks submit when name is empty
-- [x] 2.5 ConfigCard renders with correct calculated weight
-- [x] 2.6 ConfigList renders empty-state message when no configs provided
+- [x] 2.2 Live calc: handle=2.5, plate=1.25, count=4 → shows `7.5 kg` — fba656b
+- [x] 2.3 Live calc shows `0.0 kg` when fields are empty — fba656b
+- [x] 2.4 Client-side validation blocks submit when name is empty — fba656b
+- [x] 2.5 ConfigCard renders with correct calculated weight — fba656b
+- [x] 2.6 ConfigList renders empty-state message when no configs provided — fba656b
 
 ### Phase 3: Dashboard integration
 
 #### Automated
 
-- [x] 3.1 `npm run build` exits 0
-- [x] 3.2 `npx astro sync && npm run lint` passes
+- [x] 3.1 `npm run build` exits 0 — fba656b
+- [x] 3.2 `npx astro sync && npm run lint` passes — fba656b
 
 #### Manual
 
-- [x] 3.3 Sign in → dashboard shows form and empty-state
-- [x] 3.4 Submit form → config card appears after redirect
-- [x] 3.5 Live calc works end-to-end in browser
-- [x] 3.6 Duplicate name → specific error on dashboard
-- [x] 3.7 Empty form submit → client-side validation blocks
-- [x] 3.8 Unauthenticated `/dashboard` visit → redirect to sign-in
+- [x] 3.3 Sign in → dashboard shows form and empty-state — fba656b
+- [x] 3.4 Submit form → config card appears after redirect — fba656b
+- [x] 3.5 Live calc works end-to-end in browser — fba656b
+- [x] 3.6 Duplicate name → specific error on dashboard — fba656b
+- [x] 3.7 Empty form submit → client-side validation blocks — fba656b
+- [x] 3.8 Unauthenticated `/dashboard` visit → redirect to sign-in — fba656b
