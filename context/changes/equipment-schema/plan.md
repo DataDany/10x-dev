@@ -331,10 +331,10 @@ Link the local project to the remote Supabase project and push the migration so 
 
 #### Automated
 
-- [x] 4.1 `supabase db push` exits 0
+- [x] 4.1 `supabase db push` exits 0 — bb48897
 
 #### Manual
 
-- [x] 4.2 Remote dashboard shows `equipment_configs` table
-- [x] 4.3 Remote dashboard shows 4 RLS policies on `equipment_configs`
-- [x] 4.4 Remote env vars in `.dev.vars` match the remote project credentials
+- [x] 4.2 Remote dashboard shows `equipment_configs` table — bb48897
+- [x] 4.3 Remote dashboard shows 4 RLS policies on `equipment_configs` — bb48897
+- [x] 4.4 Remote env vars in `.dev.vars` match the remote project credentials — bb48897

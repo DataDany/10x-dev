@@ -1,7 +1,7 @@
 ---
 change_id: equipment-schema
 title: Migrate equipment config schema to Supabase with row-level security
-status: implementing
+status: implemented
 created: 2026-06-15
 updated: 2026-06-18
 archived_at: null
