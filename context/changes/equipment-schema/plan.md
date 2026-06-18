@@ -311,21 +311,21 @@ Link the local project to the remote Supabase project and push the migration so 
 
 #### Automated
 
-- [x] 2.1 `npx astro sync && npm run lint` passes with `Database` generic in `supabase.ts`
+- [x] 2.1 `npx astro sync && npm run lint` passes with `Database` generic in `supabase.ts` — 80951ef
 
 #### Manual
 
-- [x] 2.2 IDE hover on `Database['public']['Tables']['equipment_configs']['Row']` shows correct fields
+- [x] 2.2 IDE hover on `Database['public']['Tables']['equipment_configs']['Row']` shows correct fields — 80951ef
 
 ### Phase 3: Seed data
 
 #### Automated
 
-- [ ] 3.1 `supabase db reset` exits 0 with `seed.sql` present
+- [x] 3.1 `supabase db reset` exits 0 with `seed.sql` present
 
 #### Manual
 
-- [ ] 3.2 After activating seed, 2 configs appear in Studio Table Editor
+- [x] 3.2 After activating seed, 2 configs appear in Studio Table Editor
 
 ### Phase 4: Remote deployment
 

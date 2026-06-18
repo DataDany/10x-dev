@@ -1,0 +1,14 @@
+-- Seed example equipment configs for local development.
+--
+-- Steps to activate:
+--   1. Run the app:  npm run dev
+--   2. Sign up at:   http://localhost:3000/auth/signup
+--   3. Open Studio:  http://localhost:54323
+--   4. Go to:        Authentication → Users → copy your UUID
+--   5. Replace <YOUR_USER_UUID> below with your actual UUID
+--   6. Uncomment the INSERT and run: supabase db reset
+--
+-- INSERT INTO public.equipment_configs (user_id, name, equipment_type, handle_weight, plate_weight, plate_count)
+-- VALUES
+--   ('<YOUR_USER_UUID>', 'Left dumbbell',  'dumbbell', 2.5, 1.25, 4),
+--   ('<YOUR_USER_UUID>', 'Right dumbbell', 'dumbbell', 2.5, 1.25, 4);
