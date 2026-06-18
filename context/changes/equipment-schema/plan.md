@@ -299,23 +299,23 @@ Link the local project to the remote Supabase project and push the migration so 
 
 #### Automated
 
-- [x] 1.1 `supabase db reset` exits 0
+- [x] 1.1 `supabase db reset` exits 0 — e742192
 
 #### Manual
 
-- [x] 1.2 Studio shows `equipment_configs` table with correct columns
-- [x] 1.3 Studio shows 4 RLS policies on `equipment_configs`
-- [x] 1.4 Anonymous SQL query returns 0 rows (RLS verified)
+- [x] 1.2 Studio shows `equipment_configs` table with correct columns — e742192
+- [x] 1.3 Studio shows 4 RLS policies on `equipment_configs` — e742192
+- [x] 1.4 Anonymous SQL query returns 0 rows (RLS verified) — e742192
 
 ### Phase 2: TypeScript types
 
 #### Automated
 
-- [ ] 2.1 `npx astro sync && npm run lint` passes with `Database` generic in `supabase.ts`
+- [x] 2.1 `npx astro sync && npm run lint` passes with `Database` generic in `supabase.ts`
 
 #### Manual
 
-- [ ] 2.2 IDE hover on `Database['public']['Tables']['equipment_configs']['Row']` shows correct fields
+- [x] 2.2 IDE hover on `Database['public']['Tables']['equipment_configs']['Row']` shows correct fields
 
 ### Phase 3: Seed data
 
