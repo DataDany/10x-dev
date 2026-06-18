@@ -321,20 +321,20 @@ Link the local project to the remote Supabase project and push the migration so 
 
 #### Automated
 
-- [x] 3.1 `supabase db reset` exits 0 with `seed.sql` present
+- [x] 3.1 `supabase db reset` exits 0 with `seed.sql` present — 2d6ca13
 
 #### Manual
 
-- [x] 3.2 After activating seed, 2 configs appear in Studio Table Editor
+- [x] 3.2 After activating seed, 2 configs appear in Studio Table Editor — 2d6ca13
 
 ### Phase 4: Remote deployment
 
 #### Automated
 
-- [ ] 4.1 `supabase db push` exits 0
+- [x] 4.1 `supabase db push` exits 0
 
 #### Manual
 
-- [ ] 4.2 Remote dashboard shows `equipment_configs` table
-- [ ] 4.3 Remote dashboard shows 4 RLS policies on `equipment_configs`
-- [ ] 4.4 Remote env vars in `.dev.vars` match the remote project credentials
+- [x] 4.2 Remote dashboard shows `equipment_configs` table
+- [x] 4.3 Remote dashboard shows 4 RLS policies on `equipment_configs`
+- [x] 4.4 Remote env vars in `.dev.vars` match the remote project credentials
