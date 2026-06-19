@@ -199,7 +199,7 @@ ConfigCard view mode shows an icon + type label next to the config name. Edit mo
 
 #### Automated
 
-- [x] 1.1 `npx astro sync && npm run lint` passes [plan updated: kettlebell → custom]
+- [x] 1.1 `npx astro sync && npm run lint` passes [plan updated: kettlebell → custom] — 4e0049e
 
 #### Manual
 
@@ -214,13 +214,13 @@ ConfigCard view mode shows an icon + type label next to the config name. Edit mo
 
 #### Automated
 
-- [ ] 2.1 `npx astro sync && npm run lint` passes
-- [ ] 2.2 `npm run build` exits 0
+- [x] 2.1 `npx astro sync && npm run lint` passes
+- [x] 2.2 `npm run build` exits 0
 
 #### Manual
 
-- [ ] 2.3 Config cards show type icon + label in view mode
-- [ ] 2.4 Edit pre-selects the correct type for existing configs
-- [ ] 2.5 Switching to kettlebell in edit hides plate fields and resets them to 0
-- [ ] 2.6 Saving a type change updates the DB and card icon
-- [ ] 2.7 Cancel from edit returns card to view mode without changes
+- [x] 2.3 Config cards show type icon + label in view mode
+- [x] 2.4 Edit pre-selects the correct type for existing configs
+- [x] 2.5 Switching to kettlebell in edit hides plate fields and resets them to 0
+- [x] 2.6 Saving a type change updates the DB and card icon
+- [x] 2.7 Cancel from edit returns card to view mode without changes

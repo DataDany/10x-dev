@@ -23,9 +23,20 @@ export const PATCH: APIRoute = async (context) => {
   const name = typeof body.name === "string" ? body.name.trim() : "";
   if (!name) return json({ error: "Name is required" }, 400);
 
+  const et = body.equipment_type;
+  if (typeof et !== "string" || !["dumbbell", "barbell", "kettlebell", "custom"].includes(et)) {
+    return json({ error: "Invalid equipment type" }, 400);
+  }
+  const equipmentType = et;
+
   const hw = body.handle_weight;
   const handleWeight = typeof hw === "number" ? hw : typeof hw === "string" ? parseFloat(hw) : NaN;
-  if (isNaN(handleWeight) || handleWeight <= 0) return json({ error: "Handle weight must be greater than 0" }, 400);
+  if (isNaN(handleWeight) || (equipmentType === "custom" ? handleWeight < 0 : handleWeight <= 0)) {
+    return json(
+      { error: equipmentType === "custom" ? "Weight must be 0 or more" : "Handle weight must be greater than 0" },
+      400,
+    );
+  }
 
   const pw = body.plate_weight;
   const plateWeight = typeof pw === "number" ? pw : typeof pw === "string" ? parseFloat(pw) : NaN;
@@ -40,7 +51,13 @@ export const PATCH: APIRoute = async (context) => {
 
   const { error } = await supabase
     .from("equipment_configs")
-    .update({ name, handle_weight: handleWeight, plate_weight: plateWeight, plate_count: plateCount })
+    .update({
+      name,
+      equipment_type: equipmentType,
+      handle_weight: handleWeight,
+      plate_weight: plateWeight,
+      plate_count: plateCount,
+    })
     .eq("id", id)
     .eq("user_id", user.id);
 
