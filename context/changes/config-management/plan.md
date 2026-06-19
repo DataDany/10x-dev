@@ -183,16 +183,16 @@ Confirm-delete mode renders: "Are you sure you want to delete "{config.name}"?" 
 
 #### Automated
 
-- [x] 2.1 `npx astro sync && npm run lint` passes
-- [x] 2.2 `npm run build` exits 0
+- [x] 2.1 `npx astro sync && npm run lint` passes — 6ca0f74
+- [x] 2.2 `npm run build` exits 0 — 6ca0f74
 
 #### Manual
 
-- [x] 2.3 Click Edit → card expands with pre-filled values
-- [x] 2.4 Change numeric values → live total updates
-- [x] 2.5 Save valid edit → redirect, card shows updated values
-- [x] 2.6 Save edit with duplicate name → error inside card, card stays open
-- [x] 2.7 Click Delete → confirm step appears
-- [x] 2.8 Confirm delete → config gone from list after redirect
-- [x] 2.9 Cancel edit → card returns to view mode
-- [x] 2.10 Cancel delete → card returns to view mode
+- [x] 2.3 Click Edit → card expands with pre-filled values — 6ca0f74
+- [x] 2.4 Change numeric values → live total updates — 6ca0f74
+- [x] 2.5 Save valid edit → redirect, card shows updated values — 6ca0f74
+- [x] 2.6 Save edit with duplicate name → error inside card, card stays open — 6ca0f74
+- [x] 2.7 Click Delete → confirm step appears — 6ca0f74
+- [x] 2.8 Confirm delete → config gone from list after redirect — 6ca0f74
+- [x] 2.9 Cancel edit → card returns to view mode — 6ca0f74
+- [x] 2.10 Cancel delete → card returns to view mode — 6ca0f74
