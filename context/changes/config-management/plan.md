@@ -169,30 +169,30 @@ Confirm-delete mode renders: "Are you sure you want to delete "{config.name}"?" 
 
 #### Automated
 
-- [x] 1.1 `npx astro sync && npm run lint` passes
+- [x] 1.1 `npx astro sync && npm run lint` passes — e9c2472
 
 #### Manual
 
-- [x] 1.2 PATCH valid data → config updated in Supabase Studio
-- [x] 1.3 PATCH duplicate name → 409 with specific error message
-- [x] 1.4 PATCH empty name → 400 with validation error
-- [x] 1.5 DELETE config → row removed from Studio
-- [x] 1.6 PATCH/DELETE unauthenticated → 401
+- [x] 1.2 PATCH valid data → config updated in Supabase Studio — e9c2472
+- [x] 1.3 PATCH duplicate name → 409 with specific error message — e9c2472
+- [x] 1.4 PATCH empty name → 400 with validation error — e9c2472
+- [x] 1.5 DELETE config → row removed from Studio — e9c2472
+- [x] 1.6 PATCH/DELETE unauthenticated → 401 — e9c2472
 
 ### Phase 2: Interactive ConfigCard and dashboard wiring
 
 #### Automated
 
-- [ ] 2.1 `npx astro sync && npm run lint` passes
-- [ ] 2.2 `npm run build` exits 0
+- [x] 2.1 `npx astro sync && npm run lint` passes
+- [x] 2.2 `npm run build` exits 0
 
 #### Manual
 
-- [ ] 2.3 Click Edit → card expands with pre-filled values
-- [ ] 2.4 Change numeric values → live total updates
-- [ ] 2.5 Save valid edit → redirect, card shows updated values
-- [ ] 2.6 Save edit with duplicate name → error inside card, card stays open
-- [ ] 2.7 Click Delete → confirm step appears
-- [ ] 2.8 Confirm delete → config gone from list after redirect
-- [ ] 2.9 Cancel edit → card returns to view mode
-- [ ] 2.10 Cancel delete → card returns to view mode
+- [x] 2.3 Click Edit → card expands with pre-filled values
+- [x] 2.4 Change numeric values → live total updates
+- [x] 2.5 Save valid edit → redirect, card shows updated values
+- [x] 2.6 Save edit with duplicate name → error inside card, card stays open
+- [x] 2.7 Click Delete → confirm step appears
+- [x] 2.8 Confirm delete → config gone from list after redirect
+- [x] 2.9 Cancel edit → card returns to view mode
+- [x] 2.10 Cancel delete → card returns to view mode

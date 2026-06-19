@@ -53,7 +53,7 @@ if (supabase && user) {
 
       <section>
         <h2 class="mb-4 font-semibold text-white">Saved Configurations</h2>
-        <ConfigList configs={configs} />
+        <ConfigList configs={configs} client:load />
       </section>
     </div>
   </div>
