@@ -214,13 +214,13 @@ ConfigCard view mode shows an icon + type label next to the config name. Edit mo
 
 #### Automated
 
-- [x] 2.1 `npx astro sync && npm run lint` passes
-- [x] 2.2 `npm run build` exits 0
+- [x] 2.1 `npx astro sync && npm run lint` passes — 5417f12
+- [x] 2.2 `npm run build` exits 0 — 5417f12
 
 #### Manual
 
-- [x] 2.3 Config cards show type icon + label in view mode
-- [x] 2.4 Edit pre-selects the correct type for existing configs
-- [x] 2.5 Switching to kettlebell in edit hides plate fields and resets them to 0
-- [x] 2.6 Saving a type change updates the DB and card icon
-- [x] 2.7 Cancel from edit returns card to view mode without changes
+- [x] 2.3 Config cards show type icon + label in view mode — 5417f12
+- [x] 2.4 Edit pre-selects the correct type for existing configs — 5417f12
+- [x] 2.5 Switching to kettlebell in edit hides plate fields and resets them to 0 — 5417f12
+- [x] 2.6 Saving a type change updates the DB and card icon — 5417f12
+- [x] 2.7 Cancel from edit returns card to view mode without changes — 5417f12

@@ -1,7 +1,7 @@
 ---
 change_id: extended-equipment-types
 title: Support barbell and kettlebell equipment types
-status: implementing
+status: implemented
 created: 2026-06-19
 updated: 2026-06-19
 archived_at: null
