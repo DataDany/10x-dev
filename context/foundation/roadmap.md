@@ -3,7 +3,7 @@ project: 10xStronger
 version: 1
 status: draft
 created: 2026-06-12
-updated: 2026-06-18
+updated: 2026-06-19
 prd_version: 1
 main_goal: speed
 top_blocker: time
@@ -33,7 +33,7 @@ The primary success criterion is literally "user configures a dumbbell (handle +
 | ---- | -------------------------- | ------------------------------------------------------------------------------ | ------------- | --------------------------------------------- | -------- |
 | F-01 | equipment-schema           | (foundation) equipment config schema migrated to Supabase with RLS             | —             | FR-003, FR-004, FR-005, FR-006, FR-007        | ready    |
 | S-01 | dumbbell-config-calculator | create a dumbbell config and immediately see the calculated total weight       | F-01          | FR-001, FR-002, FR-003, FR-004, FR-005, US-01 | done     |
-| S-02 | config-management          | edit and delete existing equipment configurations                              | F-01, S-01    | FR-006, FR-007                                | proposed |
+| S-02 | config-management          | edit and delete existing equipment configurations                              | F-01, S-01    | FR-006, FR-007                                | done     |
 | S-03 | extended-equipment-types   | configure other equipment types (barbell, kettlebell) using the same mechanism | F-01, S-01    | FR-008                                        | proposed |
 
 ## Streams
@@ -96,7 +96,7 @@ Foundations below assume these are present and do NOT re-scaffold them.
 - **Blockers:** —
 - **Unknowns:** —
 - **Risk:** Edit is a recurring action — user's strength changes over time (per FR-006 Socrates note). Shipping without edit means the user must delete and recreate configs every time they progress; that's a usability regression on an otherwise fast product.
-- **Status:** proposed
+- **Status:** done
 
 ### S-03: Extended equipment types
 
@@ -134,3 +134,4 @@ Foundations below assume these are present and do NOT re-scaffold them.
 ## Done
 
 - **S-01: user can create a dumbbell configuration (name, handle weight, plate weight, plate count) and immediately see the calculated total weight updating with every input change.** — Archived 2026-06-18 → `context/archive/2026-06-18-dumbbell-config-calculator/`. Lesson: —.
+- **S-02: user can edit and delete existing equipment configurations.** — Archived 2026-06-19 → `context/archive/2026-06-19-config-management/`. Lesson: —.
