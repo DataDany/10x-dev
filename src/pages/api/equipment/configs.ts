@@ -9,12 +9,17 @@ export const POST: APIRoute = async (context) => {
 
   const form = await context.request.formData();
   const name = ((form.get("name") as string | null) ?? "").trim();
+  const equipmentType = (form.get("equipment_type") as string | null) ?? "";
   const handleWeightRaw = form.get("handle_weight") as string | null;
   const plateWeightRaw = form.get("plate_weight") as string | null;
   const plateCountRaw = form.get("plate_count") as string | null;
 
   if (!name) {
     return context.redirect(`/dashboard?error=${encodeURIComponent("Name is required")}`);
+  }
+
+  if (!["dumbbell", "barbell", "kettlebell", "custom"].includes(equipmentType)) {
+    return context.redirect(`/dashboard?error=${encodeURIComponent("Invalid equipment type")}`);
   }
 
   const handleWeight = parseFloat(handleWeightRaw ?? "");
@@ -38,7 +43,7 @@ export const POST: APIRoute = async (context) => {
 
   const { error } = await supabase.from("equipment_configs").insert({
     name,
-    equipment_type: "dumbbell",
+    equipment_type: equipmentType,
     handle_weight: handleWeight,
     plate_weight: plateWeight,
     plate_count: plateCount,
