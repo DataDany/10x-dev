@@ -12,7 +12,7 @@ CREATE TABLE public.equipment_configs (
   UNIQUE (user_id, name)
 );
 
--- updated_at auto-maintenance
+-- Shared updated_at trigger function. Do not redefine inline in future migrations.
 CREATE OR REPLACE FUNCTION public.handle_updated_at ()
 RETURNS TRIGGER AS $$
 BEGIN
