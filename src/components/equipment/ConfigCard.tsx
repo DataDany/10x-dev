@@ -44,7 +44,7 @@ function TypeIcon({ type }: { type: TypeMode }) {
 }
 
 export function ConfigCard({ config }: Props) {
-  const configType = config.equipment_type as TypeMode;
+  const configType = config.equipment_type;
   const [mode, setMode] = useState<Mode>("view");
   const [equipmentType, setEquipmentType] = useState<TypeMode>(configType);
   const [name, setName] = useState(config.name);

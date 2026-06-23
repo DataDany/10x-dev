@@ -1,3 +1,4 @@
+-- DO NOT COMMIT WITH UNCOMMENTED INSERTS.
 -- Seed example equipment configs for local development.
 --
 -- Steps to activate:

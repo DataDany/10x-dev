@@ -1,4 +1,8 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
+// equipment_type union kept in sync with app TypeMode and the DB CHECK constraint.
+// Regenerating via `supabase gen types typescript --local` will reset this to string — re-apply manually.
+export type EquipmentType = "dumbbell" | "barbell" | "kettlebell" | "custom";
+
 export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[];
 
 export type Database = {
@@ -9,7 +13,7 @@ export type Database = {
           id: string;
           user_id: string;
           name: string;
-          equipment_type: string;
+          equipment_type: EquipmentType;
           handle_weight: number;
           plate_weight: number;
           plate_count: number;
