@@ -20,7 +20,7 @@ let configs: {
   updated_at: string;
 }[] = [];
 
-if (supabase && user) {
+if (user) {
   const { data } = await supabase.from("equipment_configs").select("*").order("created_at", { ascending: false });
   configs = data ?? [];
 }

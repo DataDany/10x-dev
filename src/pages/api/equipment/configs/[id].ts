@@ -47,7 +47,6 @@ export const PATCH: APIRoute = async (context) => {
   if (isNaN(plateCount) || plateCount < 0) return json({ error: "Plate count must be a non-negative integer" }, 400);
 
   const supabase = createClient(context.request.headers, context.cookies);
-  if (!supabase) return json({ error: "Supabase is not configured" }, 500);
 
   const { error } = await supabase
     .from("equipment_configs")
@@ -76,7 +75,6 @@ export const DELETE: APIRoute = async (context) => {
   const id = context.params.id;
 
   const supabase = createClient(context.request.headers, context.cookies);
-  if (!supabase) return json({ error: "Supabase is not configured" }, 500);
 
   const { error } = await supabase.from("equipment_configs").delete().eq("id", id).eq("user_id", user.id);
 

@@ -37,9 +37,6 @@ export const POST: APIRoute = async (context) => {
   }
 
   const supabase = createClient(context.request.headers, context.cookies);
-  if (!supabase) {
-    return context.redirect(`/dashboard?error=${encodeURIComponent("Supabase is not configured")}`);
-  }
 
   const { error } = await supabase.from("equipment_configs").insert({
     name,
